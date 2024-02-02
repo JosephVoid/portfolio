@@ -77,9 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         /* Zoom in upto x1.6 or Zoom out upto x0.6 */
         if (e.deltaY < 0 && zoom < 1.6)
-            zoom += 0.02;
+            zoom += 0.06;
         else if (e.deltaY > 0 && zoom > 0.6)
-            zoom -= 0.02
+            zoom -= 0.06;
         /* Set the center of transformation to cursor */
         draggedElem.style.transformOrigin = cursor_pos.x < 400 ? `-50px calc(${cursor_pos.y}px - 50px)` : `${cursor_pos.x}px ${cursor_pos.y}px`
         /* Set zoom */

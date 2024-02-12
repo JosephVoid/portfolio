@@ -11,7 +11,7 @@
   @font-face {
     font-family: Geist;
     font-weight: 400;
-    src: url("/Geist-Regular.otf");
+    src: url("/Geist-Medium.otf");
   }
   @font-face {
     font-family: Geist;
@@ -71,8 +71,8 @@ body {
   padding: 20px;
 }
 ._item:hover {
-  border: 1px solid #0000001a;
-  transform: translateY(-3px);
+  box-shadow: 0px 0px 0 1px #81818136;
+  /* transform: translateY(-3px); */
   background-color: #fafafa;
 }
 #pic-name {
@@ -148,7 +148,7 @@ body {
   grid-row-end: 6;
 }
 
-#blogs {
+#experience {
   grid-column-start: 6;
   grid-column-end: 8;
   grid-row-start: 6;

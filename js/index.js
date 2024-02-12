@@ -25,20 +25,33 @@ $("._nav").on("click", function (event) {
   }
 });
 
-// Get the reference and dependent elements
-const referenceElement = document.getElementById("drg-element");
-const dependentElements = document.getElementsByTagName("p");
-
-let ro = new ResizeObserver(() => {
-  console.log(
-    `${(referenceElement.offsetWidth + referenceElement.offsetHeight) / 250}px`
-  );
-  for (let index = 0; index < dependentElements.length; index++) {
-    const element = dependentElements[index];
-    element.style.fontSize = `${
-      (referenceElement.offsetWidth + referenceElement.offsetHeight) / 200
-    }px`;
+function scale_tags(referenceElement, elements, scales) {
+  function setElements(dependentElementType, scl) {
+    for (let index = 0; index < dependentElementType.length; index++) {
+      const element = dependentElementType[index];
+      element.style.fontSize = `${
+        (referenceElement.offsetWidth + referenceElement.offsetHeight) /
+        (100 * scl)
+      }px`;
+    }
   }
-});
 
-ro.observe(referenceElement);
+  let ro = new ResizeObserver(() => {
+    for (let index = 0; index < elements.length; index++) {
+      const element = elements[index];
+      setElements(element, scales[index]);
+    }
+  });
+
+  return ro;
+}
+
+scale_tags(
+  document.getElementById("drg-element"),
+  [
+    document.getElementsByTagName("p"),
+    document.getElementsByTagName("h1"),
+    document.getElementsByTagName("h3"),
+  ],
+  [2, 0.5]
+).observe(document.getElementById("drg-element"));

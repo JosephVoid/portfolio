@@ -3,7 +3,7 @@ $(function () {
   $("#drg-element").dragZoom({
     scope: $("body"),
     minzoom: 0.5,
-    maxzoom: 3,
+    maxzoom: 2,
     speed: 0.2,
   });
 });
@@ -53,5 +53,5 @@ scale_tags(
     document.getElementsByTagName("h1"),
     document.getElementsByTagName("h3"),
   ],
-  [2, 0.5]
+  [2.3, 0.5, 1]
 ).observe(document.getElementById("drg-element"));

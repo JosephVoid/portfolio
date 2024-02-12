@@ -8,6 +8,16 @@
     font-weight: 400;
     src: url("/ProtestStrike-Regular.ttf");
   }
+  @font-face {
+    font-family: Geist;
+    font-weight: 400;
+    src: url("/Geist-Regular.otf");
+  }
+  @font-face {
+    font-family: Geist;
+    font-weight: 300;
+    src: url("/Geist-Light.otf");
+  }
 }
 
 * {
@@ -16,6 +26,10 @@
 h1,
 h3 {
   font-family: "ProtestStrike";
+}
+p {
+  font-family: "Geist";
+  font-weight: 300;
 }
 body {
   display: flex;
@@ -54,11 +68,12 @@ body {
   text-align: center;
   font-size: 80%;
   background-color: #fcfcfc;
+  padding: 20px;
 }
 ._item:hover {
-  box-shadow: 0px 2px 3px 0.5px #f0f0f0;
+  border: 1px solid #0000001a;
   transform: translateY(-3px);
-  background-color: #f9f9f9;
+  background-color: #fafafa;
 }
 #pic-name {
   grid-column-start: 1;
@@ -78,13 +93,22 @@ body {
   grid-row-start: 6;
   grid-row-end: 13;
   display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  padding: 0 !important;
+  background-color: unset;
+}
+#skills-edu:hover {
+  box-shadow: initial;
+  transform: initial;
+  background-color: initial;
 }
 #skills {
   grid-column-start: 1;
   grid-column-end: 8;
   grid-row-start: 1;
   grid-row-end: 14;
-  background-color: aliceblue;
+  background-color: #fcfcfc;
   border: none !important;
 }
 
@@ -94,7 +118,7 @@ body {
   grid-column-end: 14;
   grid-row-start: 1;
   grid-row-end: 6;
-  background-color: aliceblue;
+  background-color: #fcfcfc;
   border: none !important;
   border-radius: 0 0 0 10px;
 }
@@ -107,7 +131,7 @@ body {
   height: 25px;
   width: 15px;
   border-top-left-radius: 25px;
-  box-shadow: 0 -15px 0 0 aliceblue;
+  box-shadow: 0 -15px 0 0 #fcfcfc;
   left: 0;
 }
 #education {

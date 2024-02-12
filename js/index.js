@@ -9,7 +9,7 @@ $(function () {
 });
 
 /* Register and event listener for the navigation buttons */
-$(".nav").on("click", function (event) {
+$("._nav").on("click", function (event) {
   event.preventDefault();
 
   const targetId = event.target.getAttribute("href").substring(1);

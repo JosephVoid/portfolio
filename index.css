@@ -65,14 +65,27 @@ body {
     }
 
     #skills-add {
-        grid-column-start: 6;
+        position: relative;
+        grid-column-start: 8;
         grid-column-end: 14;
         grid-row-start: 1;
         grid-row-end: 6;
         background-color: aliceblue;
         border: none !important;
+        border-radius: 0 0 0 10px;
     }
 
+    #skills-add::before{
+        content: "";
+        position: absolute;
+        background-color: white;
+        bottom: -27px;
+        height: 25px;
+        width: 15px;
+        border-top-left-radius: 25px;
+        box-shadow: 0 -15px 0 0 aliceblue; 
+        left: 0;
+    }
     #education {
         grid-column-start: 8;
         grid-column-end: 14;

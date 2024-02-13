@@ -33,6 +33,7 @@ p {
 }
 .overlay {
   transition: 400ms;
+  background-color: #fcfcfc;
 }
 /* Animating the dialog/modal start*/
 dialog[open] {

@@ -31,6 +31,37 @@ p {
   font-family: "Geist";
   font-weight: 300;
 }
+.overlay {
+  transition: 400ms;
+}
+/* Animating the dialog/modal start*/
+dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+}
+dialog:focus-visible {
+  outline: none;
+}
+
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+dialog::backdrop {
+  backdrop-filter: blur(0);
+  transition: all 300ms allow-discrete;
+}
+dialog[open]::backdrop {
+  backdrop-filter: blur(2px);
+}
+@starting-style {
+  dialog[open]::backdrop {
+    backdrop-filter: blur(0);
+  }
+}
+/* Animating the dialog/modal end*/
 body {
   display: flex;
   justify-content: flex-start;
@@ -112,6 +143,22 @@ body {
   border: none !important;
 }
 
+#skills:hover ~ #skills-add {
+  box-shadow: 0px 0px 0 1px #81818136;
+  background-color: #fafafa;
+}
+#skills:hover {
+  box-shadow: 0px 0px 0 1px #81818136;
+  background-color: #fafafa;
+}
+#skills:has(+ #skills-add:hover) {
+  box-shadow: 0px 0px 0 1px #81818136;
+  background-color: #fafafa;
+}
+#skills-add:hover {
+  box-shadow: 0px 0px 0 1px #81818136;
+  background-color: #fafafa;
+}
 #skills-add {
   position: relative;
   grid-column-start: 8;

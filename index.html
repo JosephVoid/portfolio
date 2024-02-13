@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <title>Yoseph Tenaw</title>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
@@ -58,7 +59,35 @@
                     </table>
                 </div>
             </div>
-            <div class="_item" id="previous-works"><p>Previous work</p></div>
+            <div class="_item rounded-xl" id="previous-works">
+                <h3 class="uppercase opacity-80 text-start mb-4">Previous WOrk</h3>
+                <div class="flex px-4">
+                    <div class="w-1/5 mr-8 flex flex-col items-center">
+                        <div class="w-10/12">
+                            <div class="flex overflow-x-clip">
+                                <div class="flex relative">
+                                    <div class="overlay opacity-0 absolute bg-white w-full h-full"></div>
+                                    <img class="slide_1 rounded-xl slide_img" src="/dashen.png" alt="" srcset="">
+                                    <img class="slide_1 rounded-xl slide_img" src="/sebsib.png" alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="mb-2 mt-2 flex justify-around items-center">
+                                <a href=""><i class="fa fa fa-github scale-150"></i></a>
+                                <a href=""><i class="fa fa-external-link scale-150"></i></a>
+                                <i id="expandPW1" class="fa fa-expand scale-150 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Inventore, animi, facilis aut dolores amet quo corrupti 
+                                odit saepe dicta corporis, enim porro sequi obcaecati 
+                                repellendus repudiandae hic necessitatibus quas sint!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="_item rounded-xl" id="experience">
                 <h3 class="uppercase opacity-80 text-center mb-4">Experience</h3>
                 <table>
@@ -104,7 +133,13 @@
             <div class="_item" id="contact"><p>contact</p></div>
         </div>
     </div>
+    <!-- The Modal -->
+    <dialog id="modalId" class="opacity-0 scale-0 w-3/5 flex justify-center flex-wrap p-8 rounded-2xl transition-all duration-300 ease-in">
+        <img id="modalImg" src="" alt="" srcset="">
+        <h6 id="figCap" class="text-xs text-center w-5/6"></h6>
+        <i id="closeModalId" class="cursor-pointer fa fa-times scale-150 absolute top-7 right-7"></i>
+    </dialog>
 </body>
 <script src="js/dragZoom.js"></script>
-<script src="js/index.js"></script>
+<script src="js/index.js" type="module"></script>
 </html>

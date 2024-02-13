@@ -131,34 +131,47 @@
             </div>
             <div class="_item rounded-xl" id="links">
                 <h3 class="uppercase opacity-80 text-center mb-4">Links</h3>
-                <div class="p-4">
-                    <div class="flex items-center justify-start mb-6">
-                        <i class="fa fa-github scale-[2]"></i>
-                        <p class="ml-4"><a target="_blank" href="https://github.com/JosephVoid">GitHub/JosephVoid</a></p>
-                    </div>
-                    <div class="flex items-center justify-start mb-6">
+                <div>
+                    <a target="_blank" href="https://github.com/JosephVoid">
+                        <div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
+                            <i class="fa fa-github scale-[2]"></i>
+                            <p class="ml-4">GitHub/JosephVoid</p>
+                        </div>
+                    </a>
+                    <a href="mailto:yosephten@gmail.com"><div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
                         <i class="fa fa-envelope scale-[1.7]"></i>
-                        <p class="ml-4"><a href="mailto:yosephten@gmail.com">yosephten@gmail.com</a></p>
-                    </div>
-                    <div class="flex items-center justify-start mb-6">
+                        <p class="ml-4">yosephten@gmail.com</p>
+                    </div></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/yoseph-tenaw/"><div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
                         <i class="fa fa-linkedin scale-[1.7]"></i>
-                        <p class="ml-4"><a target="_blank" href="https://www.linkedin.com/in/yoseph-tenaw/">LinkedIn/yoseph-tenaw</a></p>
-                    </div>
-                    <div class="flex items-center justify-start mb-6">
-                        <i class="fa fa-pencil-square scale-[1.7]"></i>
-                        <p class="ml-4"><a target="_blank" href="https://dev.to/yosephtenaw">Dev.to/yosephtenaw</a></p>
-                    </div>
-                    <div class="flex items-center justify-start mb-6">
+                        <p class="ml-4">LinkedIn/yoseph-tenaw</a></p>
+                    </div></a>
+                    <a target="_blank" href="https://dev.to/yosephtenaw"><div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
+                        <i class="fa fa-commenting scale-[1.7]"></i>
+                        <p class="ml-4">Dev.to/yosephtenaw</p>
+                    </div></a>
+                    <a href="tel:+251920642556"><div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
                         <i class="fa fa-phone-square scale-[1.7]"></i>
-                        <p class="ml-4"><a href="tel:+251920642556">+251920642556</a></p>
-                    </div>
-                    <div class="flex items-center justify-start mb-6">
+                        <p class="ml-4">+251920642556</p>
+                    </div></a>
+                    <a href=""><div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
                         <i class="fa fa-file-text scale-[1.7]"></i>
-                        <p class="ml-4"><a href="">Download My Resume</a></p>
-                    </div>
+                        <p class="ml-4">Download My Resume</p>
+                    </div></a>
                 </div>
             </div>
-            <div class="_item" id="contact"><p>contact</p></div>
+            <div class="_item rounded-xl" id="contact">
+                <h3 class="uppercase opacity-80 text-center mb-4">Contact Me</h3>
+                <form action="http://somewhere.com" method="post" class="relative flex flex-col justify-start text-start">
+                    <label for="email_contact"><p>Email</p></label>
+                    <input type="email" name="email" id="email_contact" class="p-2 mb-4 border border-gray-200 rounded-md">
+                    <label for="subject_contact"><p>Subject</p></label>
+                    <input type="text" name="subject" id="subject_contact" class="p-2 mb-4 border border-gray-200 rounded-md">
+                    <label for="body_contact"><p>Message</p></label>
+                    <textarea name="body" id="body_contact" cols="30" rows="4" class="p-2 mb-4 border border-gray-200 rounded-md"></textarea>
+                    <button type="submit" class="bg-gray-600 rounded-md text-white p-2"><p>Send</p></button>
+                </form>
+            </div>
         </div>
     </div>
     <!-- The Modal -->

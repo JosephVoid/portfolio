@@ -145,20 +145,40 @@ body {
 }
 
 #skills:hover ~ #skills-add {
-  box-shadow: 0px 0px 0 1px #81818136;
+  border: 2px solid #81818136;
+  border-left: 0 !important;
   background-color: #fafafa;
 }
+#skills:hover ~ #skills-add::before {
+  border-top: 2px solid #81818136;
+  border-left: 2px solid #81818136;
+  box-shadow: 0 -15px 0 0 #fafafa;
+  transform: translateX(4px);
+  transform: translateY(-1.5px);
+}
 #skills:hover {
-  box-shadow: 0px 0px 0 1px #81818136;
+  border: 2px solid #81818136;
+  border-left: 0 !important;
   background-color: #fafafa;
 }
 #skills:has(+ #skills-add:hover) {
-  box-shadow: 0px 0px 0 1px #81818136;
+  border: 2px solid #81818136;
+  border-left: 0 !important;
   background-color: #fafafa;
+  box-shadow: 0px 0px 0 1px #81818136;
 }
 #skills-add:hover {
-  box-shadow: 0px 0px 0 1px #81818136;
+  border: 2px solid #81818136;
+  border-left: 0 !important;
   background-color: #fafafa;
+  box-shadow: none !important;
+}
+#skills-add:hover::before {
+  border-top: 2px solid #81818136;
+  border-left: 2px solid #81818136;
+  box-shadow: 0 -15px 0 0 #fafafa;
+  transform: translateX(4px);
+  transform: translateY(-1.5px);
 }
 #skills-add {
   position: relative;
@@ -167,20 +187,26 @@ body {
   grid-row-start: 1;
   grid-row-end: 6;
   background-color: #fcfcfc;
-  border: none !important;
   border-radius: 0 0 0 10px;
+  transform: translateX(-2px);
 }
 
 #skills-add::before {
   content: "";
   position: absolute;
   background-color: white;
-  bottom: -27px;
+  bottom: -26px;
   height: 25px;
   width: 15px;
   border-top-left-radius: 25px;
   box-shadow: 0 -15px 0 0 #fcfcfc;
-  left: 0;
+  left: 1px;
+}
+.tooltip {
+  visibility: hidden;
+}
+.tech:hover .tooltip {
+  visibility: visible;
 }
 #education {
   grid-column-start: 8;

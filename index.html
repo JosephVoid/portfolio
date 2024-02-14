@@ -10,17 +10,57 @@
     <script src="js/jquery.mousewheel.min.js"></script>
 </head>
 <body>
-    <div class="_side-bar">
-        <ul>
-            <li id="a" class="_nav"><a href="#pic-name">go to pic-name</a></li>
-            <li id="b" class="_nav"><a href="#about">go to about</a></li>
-            <li id="c" class="_nav"><a href="#skills">go to skills</a></li>
-            <li id="a" class="_nav"><a href="#previous-works">go to previous-works</a></li>
-            <li id="b" class="_nav"><a href="#education">go to education</a></li>
-            <li id="c" class="_nav"><a href="#experience">go to experience</a></li>
-            <li id="b" class="_nav"><a href="#links">go to links</a></li>
-            <li id="c" class="_nav"><a href="#contact">go to contact</a></li>
-        </ul>
+    <div class="_side-bar p-6 text-center relative flex flex-col">
+        <h2>Navigation</h2>
+        <div class="text-start py-4">
+            <a class="_nav" href="#pic-name">
+                <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                    <h4>Photo</h4>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </a>
+            <a class="_nav" href="#about">
+                <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                    <h4>About Me</h4>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </a>
+            <a class="_nav" href="#skills">
+                <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                    <h4>My Skills</h4>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </a>
+            <a class="_nav" href="#previous-works">
+                <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                    <h4>My Projects</h4>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </a>
+            <a class="_nav" href="#experience">
+                <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                    <h4>Experience</h4>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </a>
+            <a class="_nav" href="#links">
+                <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                    <h4>Links</h4>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </a>
+            <a class="_nav" href="#contact">
+                <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                    <h4>Contact Me</h4>
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+        <div class="mt-auto opacity-80">
+            <i class="fa fa-github scale-150 mb-2"></i>
+            <h2 class="text-xs">Yoseph Tenaw</h2>
+            <h2 class="text-xs">2024</h2>
+        </div>
     </div>
     <div class="_container" id="drg-scrl">
         <div class="_drg-scroll" id="drg-element">

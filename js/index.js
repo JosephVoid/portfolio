@@ -14,7 +14,7 @@ $(function () {
 $("._nav").on("click", function (event) {
   event.preventDefault();
 
-  const targetId = event.target.getAttribute("href").substring(1);
+  const targetId = event.currentTarget.getAttribute("href").substring(1);
   const targetElement = $(`#${targetId}`);
 
   if (targetElement) {

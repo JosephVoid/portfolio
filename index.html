@@ -8,6 +8,7 @@
     <title>Yoseph Tenaw</title>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
     <div class="_side-bar-mobile p-6 text-center relative flex flex-col justify-between">
@@ -275,7 +276,7 @@
             <h2 class="text-xs">2024</h2>
         </div>
     </div>
-    <div class="_container" id="drg-scrl">
+    <div class="_container relative" id="drg-scrl">
         <div class="_drg-scroll" id="drg-element">
             <div class="_item flex justify-center rounded-xl" id="pic-name">
                 <div class="w-1/2 flex justify-center align-middle">
@@ -339,12 +340,12 @@
                     <h3 class="uppercase opacity-80 text-center mb-4">Education</h3>
                     <table>
                         <tr>
-                            <td class="w-1/4"><img class="object-contain" src="/AASTUlogo.png" alt=""></td>
-                            <td><p class="text-start">Addis Ababa Science and Technology University, Bsc.</p></td>
+                            <td class="w-1/4"><img class="object-contain" src="/aaulogo.png" alt=""></td>
+                            <td><p class="text-start">Addis Ababa University, Msc. 2025*</p></td>
                         </tr>
                         <tr>
-                            <td class="w-1/4"><img class="object-contain" src="/aaulogo.png" alt=""></td>
-                            <td><p class="text-start">Addis Ababa University, Msc.</p></td>
+                            <td class="w-1/4"><img class="object-contain" src="/AASTUlogo.png" alt=""></td>
+                            <td><p class="text-start">Addis Ababa Science and Technology University, Bsc 2021.</p></td>
                         </tr>
                     </table>
                 </div>
@@ -463,6 +464,14 @@
                 </form>
             </div>
         </div>
+        <div class="fixed bottom-4 right-4">
+            <div class="bg-white p-4 shadow-md mb-4 rounded-md cursor-pointer" id="zoomIn">
+                <i style="display: flex; justify-content: center; align-items: center;" class="scale-150 fa fa-plus text-3xl h-4 w-4"></i>
+            </div>
+            <div class="bg-white p-4 shadow-md mb-4 rounded-md cursor-pointer" id="zoomOut">
+                <i style="display: flex; justify-content: center; align-items: center;" class="scale-150 fa fa-minus text-3xl h-4 w-4"></i>
+            </div>
+        </div>
     </div>
     <!-- The Modal -->
     <dialog id="modalId" class="opacity-0 scale-0 w-3/5 flex justify-center flex-wrap p-8 rounded-2xl transition-all duration-300 ease-in">
@@ -472,6 +481,6 @@
     </dialog>
 </body>
 <script src="js/dragZoom.js"></script>
-<script src="js/jquery.marquee.min.js"></script>
+<script src="js/dragPan.js"></script>
 <script src="js/index.js" type="module"></script>
 </html>

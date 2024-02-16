@@ -1,20 +1,45 @@
 import json from "./data.json";
 
-/* Dragging functionalities */
-$(function () {
-  $("#drg-element").dragZoom({
-    scope: $("body"),
-    minzoom: 0.7,
-    maxzoom: 2,
-    speed: 0.2,
-  });
+// /* Dragging functionalities */
+// $(function () {
+//   $("#drg-element").dragZoom({
+//     scope: $("body"),
+//     zoom: 1.5,
+//     minzoom: 0.7,
+//     maxzoom: 2,
+//     speed: 0.2,
+//   });
+// });
+var global_scale = 1;
+
+$(document).ready(function () {
+  $("#drg-scrl").dragpan();
 });
 
-/* Marque function */
-$(".marquee").marquee({
-  direction: "left",
-  duplicated: true,
-  gap: 50,
+$("#drg-scrl").on("wheel", function (event) {
+  if (event.originalEvent.deltaY < 0 && global_scale < 2) {
+    // wheeled up
+    global_scale *= 1.1;
+    $("#drg-element").css("transform-origin", "0 0");
+    $("#drg-element").css("transform", "scale(" + global_scale + ")");
+  } else if (event.originalEvent.deltaY && global_scale > 0.5) {
+    // wheeled down
+    global_scale *= 0.9;
+    // $("#drg-element").css("transform-origin", "0 0");
+    $("#drg-element").css("transform", "scale(" + global_scale + ")");
+  }
+});
+
+$("#zoomIn").on("click", function (event) {
+  global_scale *= 1.1;
+  $("#drg-element").css("transform-origin", "0 0");
+  $("#drg-element").css("transform", "scale(" + global_scale + ")");
+});
+
+$("#zoomOut").on("click", function (event) {
+  global_scale *= 0.9;
+  $("#drg-element").css("transform-origin", "0 0");
+  $("#drg-element").css("transform", "scale(" + global_scale + ")");
 });
 
 /* Register and event listener for the navigation buttons */

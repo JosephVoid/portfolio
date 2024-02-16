@@ -10,6 +10,51 @@
     <script src="js/jquery.mousewheel.min.js"></script>
 </head>
 <body>
+    <!-- <div class="_side-bar-mobile p-6 text-center relative flex flex-col">
+        <h1 class="uppercase text-3xl mb-4">Yoseph Tenaw</h1>
+        <div class="text-start py-4">
+            <div class="hover:bg-lightest-grey p-4 rounded-md flex flex-col items-start">
+                <div class="collapse-button flex justify-start items-center mb-2">
+                    <i class="fa fa-plus mr-2"></i>
+                    <h4>Photo</h4>
+                </div>
+                <div id="photo-collapse" class="collapse-content max-h-0 overflow-hidden">
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum libero officia incidunt quasi ut nemo illum voluptas, porro veritatis modi sed dolorem! Accusamus commodi vel, repudiandae in perspiciatis dicta hic?
+                    </p>
+                </div>
+            </div>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                <h4>About Me</h4>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                <h4>My Skills</h4>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                <h4>My Projects</h4>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                <h4>Experience</h4>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                <h4>Links</h4>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
+                <h4>Contact Me</h4>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+        </div>
+        <div class="mt-auto opacity-80">
+            <i class="fa fa-github scale-150 mb-2"></i>
+            <h2 class="text-xs">Yoseph Tenaw</h2>
+            <h2 class="text-xs">2024</h2>
+        </div>
+    </div> -->
     <div class="_side-bar p-6 text-center relative flex flex-col">
         <h2>Navigation</h2>
         <div class="text-start py-4">
@@ -86,30 +131,27 @@
                 <div class="_item rounded-l-xl rounded-br-xl" id="skills">
                     <h3 class="uppercase opacity-80 text-center mb-4">Skills</h3>
                     <div class="flex flex-col text-start">
-                        <div class="mb-2 px-4 pt-4 rounded-lg bg-lightest-grey">
+                        <div class="mb-2 px-4 pt-2 rounded-lg bg-lightest-grey">
                             <p class="font-normal">Languages</p>
-                            <div class="flex justify-evenly my-4">
-                                <div class="w-1/8 text-center mr-4 tech relative">
-                                    <img src="/dashen.png" alt="" srcset="">
-                                    <span class="tooltip w-16 bg-gray-800 text-white text-center p-1 rounded-md absolute z-10">Typescript</span>
+                            <div class="flex justify-evenly my-2">
+                                <div class="relative w-1/2 h-1/6 mr-4 tech">
+                                    <img src="/tech/languages.png" alt="" srcset="">
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-2 px-4 pt-4 rounded-lg bg-lightest-grey">
+                        <div class="mb-2 px-4 pt-2 rounded-lg bg-lightest-grey">
                             <p class="font-normal">Frameworks & Libraries</p>
-                            <div class="flex justify-evenly flex-wrap my-4">
-                                <div class="w-1/8 text-center mr-4 tech relative">
-                                    <img src="/dashen.png" alt="" srcset="">
-                                    <span class="tooltip w-16 bg-gray-800 text-white text-center p-1 rounded-md absolute z-10">NodeJS</span>
+                            <div class="flex justify-evenly flex-wrap my-2">
+                                <div class="relative h-1/6 mr-4 tech">
+                                    <img src="/tech/frameworks.png" alt="" srcset="">
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-2 px-4 pt-4 rounded-lg bg-lightest-grey">
+                        <div class="mb-2 px-4 pt-2 rounded-lg bg-lightest-grey">
                             <p class="font-normal">Database & Infrastructure</p>
-                            <div class="flex justify-evenly flex-wrap my-4">
-                                <div class="w-1/8 text-center mr-4 tech relative">
-                                    <img src="/dashen.png" alt="" srcset="">
-                                    <span class="tooltip w-16 bg-gray-800 text-white text-center p-1 rounded-md absolute z-10">MySQL</span>
+                            <div class="flex justify-evenly flex-wrap my-2">
+                                <div class="text-center mr-4 tech relative">
+                                    <img src="/tech/databases.png" alt="" srcset="">
                                 </div>
                             </div>
                         </div>
@@ -118,10 +160,9 @@
                 <div class="_item !rounded-r-xl" id="skills-add">
                     <div class="text-start pb-2 px-4 pt-4 rounded-lg bg-lightest-grey">
                         <p class="font-normal">Tools & Others</p>
-                        <div class="flex justify-evenly flex-wrap my-4">
-                            <div class="w-1/8 text-center mr-4 tech relative">
-                                <img src="/dashen.png" alt="" srcset="">
-                                <span class="tooltip w-16 bg-gray-800 text-white text-center p-1 rounded-md absolute z-10">MySQL</span>
+                        <div class="flex justify-evenly flex-wrap my-2">
+                            <div class="text-center mr-4 tech relative">
+                                <img src="/tech/other.png" alt="" srcset="">
                             </div>
                         </div>
                     </div>
@@ -263,5 +304,6 @@
     </dialog>
 </body>
 <script src="js/dragZoom.js"></script>
+<script src="js/jquery.marquee.min.js"></script>
 <script src="js/index.js" type="module"></script>
 </html>

@@ -10,6 +10,13 @@ $(function () {
   });
 });
 
+/* Marque function */
+$(".marquee").marquee({
+  direction: "left",
+  duplicated: true,
+  gap: 50,
+});
+
 /* Register and event listener for the navigation buttons */
 $("._nav").on("click", function (event) {
   event.preventDefault();
@@ -48,18 +55,20 @@ function scale_tags(referenceElement, elements, scales) {
   return ro;
 }
 
-scale_tags(
-  document.getElementById("drg-element"),
-  [
-    document.getElementsByTagName("p"),
-    document.getElementsByTagName("h1"),
-    document.getElementsByTagName("h3"),
-    document.getElementsByTagName("i"),
-    document.getElementsByTagName("input"),
-    document.getElementsByTagName("textarea"),
-  ],
-  [2.3, 0.5, 1, 2.5, 2, 2]
-).observe(document.getElementById("drg-element"));
+if (screen.width > 500) {
+  scale_tags(
+    document.getElementById("drg-element"),
+    [
+      document.getElementsByTagName("p"),
+      document.getElementsByTagName("h1"),
+      document.getElementsByTagName("h3"),
+      document.getElementsByTagName("i"),
+      document.getElementsByTagName("input"),
+      document.getElementsByTagName("textarea"),
+    ],
+    [2.3, 0.5, 1, 2.5, 2, 2]
+  ).observe(document.getElementById("drg-element"));
+}
 
 /* Slide Logic */
 let changeSlide1 = slide("slide_1");
@@ -114,4 +123,22 @@ function openModal(pw) {
 function closeModal() {
   let modal = document.querySelector("dialog");
   modal.close();
+}
+
+$(".collapse-button").on("click", function (event) {
+  let icon = event.currentTarget.firstChild.nextElementSibling;
+  let collapsable = event.target.parentNode.nextElementSibling;
+  toggleCollapse(collapsable, icon);
+});
+
+function toggleCollapse(coll, icon) {
+  if (coll.style.maxHeight) {
+    coll.style.maxHeight = null;
+    icon.classList.remove("fa-minus");
+    icon.classList.add("fa-plus");
+  } else {
+    icon.classList.remove("fa-plus");
+    icon.classList.add("fa-minus");
+    coll.style.maxHeight = coll.scrollHeight + "px";
+  }
 }

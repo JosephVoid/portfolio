@@ -76,7 +76,7 @@ body {
 }
 
 ._side-bar {
-  min-width: 15%;
+  min-width: 20%;
   height: 100vh;
   outline: 1px solid #81818136;
 }
@@ -84,7 +84,7 @@ body {
 ._container {
   overflow: hidden;
   height: 100vh;
-  width: 100%;
+  width: 85%;
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.5' stroke='hsla(0, 0%, 0%, 0.02)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
 }
 
@@ -244,4 +244,20 @@ body {
   grid-column-end: 13;
   grid-row-start: 6;
   grid-row-end: 13;
+}
+/* .tech img {
+  height: 70%;
+} */
+/* Mobile Screen */
+@media only screen and (max-width: 500px) {
+  ._container {
+    display: none;
+  }
+  ._side-bar {
+    display: none;
+  }
+  ._side-bar-mobile {
+    display: block;
+    width: 100%;
+  }
 }

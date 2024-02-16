@@ -10,51 +10,219 @@
     <script src="js/jquery.mousewheel.min.js"></script>
 </head>
 <body>
-    <!-- <div class="_side-bar-mobile p-6 text-center relative flex flex-col">
+    <div class="_side-bar-mobile p-6 text-center relative flex flex-col justify-between">
         <h1 class="uppercase text-3xl mb-4">Yoseph Tenaw</h1>
         <div class="text-start py-4">
             <div class="hover:bg-lightest-grey p-4 rounded-md flex flex-col items-start">
-                <div class="collapse-button flex justify-start items-center mb-2">
+                <div class="collapse-button flex justify-center items-center mb-2">
                     <i class="fa fa-plus mr-2"></i>
                     <h4>Photo</h4>
                 </div>
                 <div id="photo-collapse" class="collapse-content max-h-0 overflow-hidden">
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum libero officia incidunt quasi ut nemo illum voluptas, porro veritatis modi sed dolorem! Accusamus commodi vel, repudiandae in perspiciatis dicta hic?
-                    </p>
+                    <div class="flex justify-center align-middle">
+                        <img class="bg-contain bg-center rounded-xl scale-75" src="./portrait.jpg" alt="" srcset="">
+                    </div>
                 </div>
             </div>
-            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
-                <h4>About Me</h4>
-                <i class="fa fa-arrow-right"></i>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex flex-col items-start">
+                <div class="collapse-button flex justify-center items-center mb-2">
+                    <i class="fa fa-plus mr-2"></i>
+                    <h4>About Me</h4>
+                </div>
+                <div id="about-collapse" class="collapse-content max-h-0 overflow-hidden">
+                    <div class="flex justify-center align-middle">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsa cupiditate commodi, neque natus consequatur corrupti distinctio enim nulla quae incidunt deleniti totam asperiores dolores dignissimos. Maiores dignissimos quibusdam esse?</p>
+                    </div>
+                </div>
             </div>
-            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
-                <h4>My Skills</h4>
-                <i class="fa fa-arrow-right"></i>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex flex-col items-start">
+                <div class="collapse-button flex justify-center items-center mb-2">
+                    <i class="fa fa-plus mr-2"></i>
+                    <h4>My Skills</h4>
+                </div>
+                <div id="skill-collapse" class="collapse-content max-h-0 overflow-hidden">
+                    <div class="flex  flex-col justify-center align-middle">
+                        <p class="text-sm mb-1">Languages</p>
+                        <div class="flex items-start mb-4 border-l border-gray-600">
+                            <div class="relative w-1/2 h-1/6 mx-4">
+                                <img src="/tech/languages.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="text-sm mb-2">Frameworks</p>
+                        <div class="flex items-start mb-4 border-l border-gray-600">
+                            <div class="relative w-5/6 h-1/6 mx-4">
+                                <img src="/tech/frameworks.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="text-sm mb-2">Database & Infrastructure</p>
+                        <div class="flex items-start mb-4 border-l border-gray-600">
+                            <div class="relative w-5/6 h-1/6 mx-4">
+                                <img src="/tech/databases.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="text-sm mb-2">Tools & Others</p>
+                        <div class="flex items-start mb-4 border-l border-gray-600">
+                            <div class="relative w-5/6 h-1/6 mx-4">
+                                <img src="/tech/other.png" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
-                <h4>My Projects</h4>
-                <i class="fa fa-arrow-right"></i>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex flex-col items-start">
+                <div class="collapse-button flex justify-center items-center mb-2">
+                    <i class="fa fa-plus mr-2"></i>
+                    <h4>My Projects</h4>
+                </div>
+                <div id="project-collapse" class="collapse-content max-h-0 overflow-hidden">
+                    <div class="flex justify-center">
+                        <div class="flex flex-col items-center text-center">
+                            <div>
+                                <div class="flex overflow-x-clip">
+                                    <div class="flex relative">
+                                        <img class="slide_1 rounded-xl slide_img" src="/dashen.png" alt="" srcset="">
+                                    </div>
+                                </div>
+                                <div class="mb-2 mt-2 flex justify-around items-center">
+                                    <a href=""><i class="fa fa fa-github scale-150"></i></a>
+                                    <a href=""><i class="fa fa-external-link scale-150"></i></a>
+                                    <!-- <i id="expandPW1" class="fa fa-expand scale-150 cursor-pointer"></i> -->
+                                </div>
+                            </div>
+                            <div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Inventore, animi, facilis aut dolores amet quo corrupti 
+                                    odit saepe dicta corporis, enim porro sequi obcaecati 
+                                    repellendus repudiandae hic necessitatibus quas sint!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
-                <h4>Experience</h4>
-                <i class="fa fa-arrow-right"></i>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex flex-col items-start">
+                <div class="collapse-button flex justify-center items-center mb-2">
+                    <i class="fa fa-plus mr-2"></i>
+                    <h4>Experience</h4>
+                </div>
+                <div id="exp-collapse" class="collapse-content max-h-0 overflow-hidden">
+                    <div class="flex justify-center align-middle">
+                        <table>
+                            <tr>
+                                <td class="w-1/5 pb-4">
+                                    <a target="_blank" href="https://www.linkedin.com/company/sebsib-data"><img class="object-contain rounded-lg" src="/sebsib.png" alt=""></a>
+                                </td>
+                                <td class="ps-4">
+                                    <p class="text-start font-normal">Chief Executive Officer, AA</p>
+                                    <p class="text-start">2024-</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-1/5 pb-4">
+                                    <a target="_blank" href="https://www.linkedin.com/company/dashen-bank-official-page/"><img class="object-contain rounded-lg" src="/dashen.png" alt=""></a>
+                                </td>
+                                <td class="ps-4">
+                                    <p class="text-start font-normal">Software and Integrations Developer, AA</p>
+                                    <p class="text-start">2022-24</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-1/5 pb-4">
+                                    <a target="_blank" href="https://www.linkedin.com/company/massdel/"><img class="object-contain rounded-lg" src="/massdel.jpg" alt=""></a>
+                                </td>
+                                <td class="ps-4">
+                                    <p class="text-start font-normal">Full Stack Developer, AA</p>
+                                    <p class="text-start">2021-22</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-1/5 pb-4">
+                                    <a target="_blank" href="https://www.linkedin.com/company/beezsocialerp/"><img class="object-contain rounded-lg" src="/beez.jpg" alt=""></a>
+                                </td>
+                                <td class="ps-4">
+                                    <p class="text-start font-normal">Junior Developer, NY</p>
+                                    <p class="text-start">2020-21</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
-                <h4>Links</h4>
-                <i class="fa fa-arrow-right"></i>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex flex-col items-start">
+                <div class="collapse-button flex justify-center items-center mb-2">
+                    <i class="fa fa-plus mr-2"></i>
+                    <h4>Links</h4>
+                </div>
+                <div id="links-collapse" class="collapse-content max-h-0 overflow-hidden">
+                    <div class="flex justify-center align-middle">
+                        <div>
+                            <a target="_blank" href="https://github.com/JosephVoid">
+                                <div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
+                                    <i class="fa fa-github scale-[2]"></i>
+                                    <p class="ml-4">GitHub/JosephVoid</p>
+                                </div>
+                            </a>
+                            <a href="mailto:yosephten@gmail.com">
+                                <div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
+                                    <i class="fa fa-envelope scale-[1.7]"></i>
+                                    <p class="ml-4">yosephten@gmail.com</p>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/yoseph-tenaw/">
+                                <div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
+                                    <i class="fa fa-linkedin scale-[1.7]"></i>
+                                    <p class="ml-4">LinkedIn/yoseph-tenaw</p>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://dev.to/yosephtenaw">
+                                <div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
+                                    <i class="fa fa-commenting scale-[1.7]"></i>
+                                    <p class="ml-4">Dev.to/yosephtenaw</p>
+                                </div>
+                            </a>
+                            <a href="tel:+251920642556">
+                                <div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
+                                <i class="fa fa-phone-square scale-[1.7]"></i>
+                                <p class="ml-4">+251920642556</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
+                                <i class="fa fa-file-text scale-[1.7]"></i>
+                                <p class="ml-4">Download My Resume</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hover:bg-lightest-grey p-3 rounded-md flex justify-between items-center">
-                <h4>Contact Me</h4>
-                <i class="fa fa-arrow-right"></i>
+            <div class="hover:bg-lightest-grey p-3 rounded-md flex flex-col items-start">
+                <div class="collapse-button flex justify-center items-center mb-2">
+                    <i class="fa fa-plus mr-2"></i>
+                    <h4>Contact Me</h4>
+                </div>
+                <div id="contact-collapse" class="collapse-content max-h-0 overflow-hidden">
+                    <div class="flex justify-start align-middle w-full">
+                        <form action="http://somewhere.com" method="post" class="w-full relative flex flex-col justify-start text-start">
+                            <label for="email_contact"><p>Email</p></label>
+                            <input type="email" name="email" id="email_contact" class="p-2 mb-4 border border-gray-200 rounded-md">
+                            <label for="subject_contact"><p>Subject</p></label>
+                            <input type="text" name="subject" id="subject_contact" class="p-2 mb-4 border border-gray-200 rounded-md">
+                            <label for="body_contact"><p>Message</p></label>
+                            <textarea name="body" id="body_contact" cols="30" rows="4" class="p-2 mb-4 border border-gray-200 rounded-md"></textarea>
+                            <button type="submit" class="bg-gray-600 rounded-md text-white p-2"><p>Send</p></button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="mt-auto opacity-80">
+        <div class="footer opacity-80">
             <i class="fa fa-github scale-150 mb-2"></i>
             <h2 class="text-xs">Yoseph Tenaw</h2>
             <h2 class="text-xs">2024</h2>
         </div>
-    </div> -->
+    </div>
     <div class="_side-bar p-6 text-center relative flex flex-col">
         <h2>Navigation</h2>
         <div class="text-start py-4">

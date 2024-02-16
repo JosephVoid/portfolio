@@ -245,9 +245,9 @@ body {
   grid-row-start: 6;
   grid-row-end: 13;
 }
-/* .tech img {
-  height: 70%;
-} */
+._side-bar-mobile {
+  display: none;
+}
 /* Mobile Screen */
 @media only screen and (max-width: 500px) {
   ._container {
@@ -259,5 +259,14 @@ body {
   ._side-bar-mobile {
     display: block;
     width: 100%;
+    height: 100vh;
+  }
+  .collapse-content {
+    width: 100%;
+  }
+  .footer {
+    position: sticky;
+    height: 60px;
+    top: calc(100vh - 60px);
   }
 }

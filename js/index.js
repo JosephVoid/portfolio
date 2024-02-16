@@ -70,9 +70,11 @@ if (screen.width > 500) {
   ).observe(document.getElementById("drg-element"));
 }
 
-/* Slide Logic */
-let changeSlide1 = slide("slide_1");
-setInterval(() => changeSlide1(), 5000);
+if (screen.width > 500) {
+  /* Slide Logic */
+  let changeSlide1 = slide("slide_1");
+  setInterval(() => changeSlide1(), 5000);
+}
 
 function slide(className) {
   var prev_works = document.getElementsByClassName(className);
@@ -129,7 +131,25 @@ $(".collapse-button").on("click", function (event) {
   let icon = event.currentTarget.firstChild.nextElementSibling;
   let collapsable = event.target.parentNode.nextElementSibling;
   toggleCollapse(collapsable, icon);
+  collapseAllExcept(collapsable.getAttribute("id"));
 });
+
+function collapseAllExcept(id) {
+  let collapsables = document.getElementsByClassName("collapse-content");
+  for (let index = 0; index < collapsables.length; index++) {
+    const element = collapsables[index];
+    const collapseButton = element.previousElementSibling.firstElementChild;
+    const collapsableId =
+      element.nextSibling.previousSibling.getAttribute("id");
+    if (element.getAttribute("id") !== id) {
+      element.style.maxHeight = null;
+    }
+    if (collapsableId !== id) {
+      collapseButton.classList.remove("fa-minus");
+      collapseButton.classList.add("fa-plus");
+    }
+  }
+}
 
 function toggleCollapse(coll, icon) {
   if (coll.style.maxHeight) {

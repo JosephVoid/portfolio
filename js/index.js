@@ -10,6 +10,14 @@ import json from "./data.json";
 //     speed: 0.2,
 //   });
 // });
+
+$(window).on("load", function () {
+  $("#loading-screen").css("opacity", 0);
+  setTimeout(() => {
+    $("#loading-screen").css("display", "none");
+  }, 500);
+});
+
 var global_scale = 1;
 
 $(document).ready(function () {

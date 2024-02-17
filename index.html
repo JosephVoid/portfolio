@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <title>Yoseph Tenaw</title>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
     <script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
+    <div id="loading-screen" class="absolute w-full h-full flex justify-center items-center bg-lightest-grey z-10 transition-all">
+        The site is loading, Thank you for your patience...
+    </div>
     <div class="_side-bar-mobile p-6 text-center relative flex flex-col justify-between">
         <h1 class="uppercase text-3xl mb-4">Yoseph Tenaw</h1>
         <div class="text-start py-4">
@@ -615,7 +619,6 @@
         <i id="closeModalId" class="cursor-pointer fa fa-times scale-150 absolute top-7 right-7"></i>
     </dialog>
 </body>
-<script src="js/dragZoom.js"></script>
 <script src="js/dragPan.js"></script>
 <script src="js/index.js" type="module"></script>
 </html>

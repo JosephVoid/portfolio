@@ -97,8 +97,10 @@ if (screen.width > 500) {
 
 if (screen.width > 500) {
   /* Slide Logic */
-  let changeSlide1 = slide("slide_1");
-  setInterval(() => changeSlide1(), 5000);
+  let changeSlide2 = slide("slide_2");
+  let changeSlide3 = slide("slide_3");
+  setInterval(() => changeSlide2(), 5000);
+  setInterval(() => changeSlide3(), 5000);
 }
 
 function slide(className) {
@@ -131,8 +133,29 @@ function slide(className) {
   };
 }
 
+// Load desription for previous works description
+$(document).ready(function () {
+  let prev_work_desc = document.getElementsByClassName("prev-works");
+  for (let index = 0; index < prev_work_desc.length; index++) {
+    const element = prev_work_desc[index];
+    element.innerText =
+      json["pW" + (index + 1)].text.length > 200
+        ? json["pW" + (index + 1)].text.slice(0, 200) + "..."
+        : json["pW" + (index + 1)].text;
+  }
+});
+// when clicking the expand buttons
 document.getElementById("expandPW1").addEventListener("click", () => {
-  openModal("previousWork1");
+  openModal("pW1");
+});
+document.getElementById("expandPW2").addEventListener("click", () => {
+  openModal("pW2");
+});
+document.getElementById("expandPW3").addEventListener("click", () => {
+  openModal("pW3");
+});
+document.getElementById("expandPW4").addEventListener("click", () => {
+  openModal("pW4");
 });
 document.getElementById("closeModalId").addEventListener("click", () => {
   closeModal();
@@ -142,8 +165,18 @@ function openModal(pw) {
   let modal = document.querySelector("dialog");
   let modalImg = document.getElementById("modalImg");
   let figCap = document.getElementById("figCap");
+  let pwTitle = document.getElementById("pw-title");
+  let gitLink = document.getElementById("git-link");
+  let siteLink = document.getElementById("site-link");
+
   modalImg.setAttribute("src", json[pw].img);
   figCap.innerText = json[pw].text;
+  pwTitle.innerText = json[pw].title;
+  gitLink.setAttribute("href", json[pw].github);
+
+  if (json[pw].site.length == 0) siteLink.style.display = "none";
+  else siteLink.setAttribute("href", json[pw].site);
+
   modal.showModal();
 }
 

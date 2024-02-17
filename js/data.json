@@ -1,10 +1,30 @@
 {
-    "previousWork1": {
-        "img":"dashen.png",
+    "pW1": {
+        "title": "Json Item Selector",
+        "site": "ss",
+        "github": "",
+        "img":"portfolio/npm.png",
         "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut dolores amet quo corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut, corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut"
     },
-    "previousWork2": {
-        "img":"sebsib.png",
+    "pW2": {
+        "title": "Sebsib Data Service",
+        "site": "ss",
+        "github": "",
+        "img":"portfolio/sebsib-arch.png",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut dolores amet quo corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut, corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut"
+    },
+    "pW3": {
+        "title": "Buyers First",
+        "site": "",
+        "github": "",
+        "img":"portfolio/buyerfirst.png",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut dolores amet quo corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut, corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut"
+    },
+    "pW4": {
+        "title": "Python & Telegram Site Scraper",
+        "site": "",
+        "github": "",
+        "img":"portfolio/telegram.png",
         "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut dolores amet quo corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut, corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut"
     }
 }

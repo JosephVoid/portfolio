@@ -1,16 +1,5 @@
 import json from "./data.json";
 
-// /* Dragging functionalities */
-// $(function () {
-//   $("#drg-element").dragZoom({
-//     scope: $("body"),
-//     zoom: 1.5,
-//     minzoom: 0.7,
-//     maxzoom: 2,
-//     speed: 0.2,
-//   });
-// });
-
 $(window).on("load", function () {
   $("#loading-screen").css("opacity", 0);
   setTimeout(() => {
@@ -22,33 +11,29 @@ var global_scale = 1;
 
 $(document).ready(function () {
   $("#drg-scrl").dragpan();
+  zoomIn();
 });
 
 $("#drg-scrl").on("wheel", function (event) {
-  if (event.originalEvent.deltaY < 0 && global_scale < 2) {
-    // wheeled up
-    global_scale *= 1.1;
-    $("#drg-element").css("transform-origin", "0 0");
-    $("#drg-element").css("transform", "scale(" + global_scale + ")");
-  } else if (event.originalEvent.deltaY && global_scale > 0.5) {
-    // wheeled down
-    global_scale *= 0.9;
-    // $("#drg-element").css("transform-origin", "0 0");
-    $("#drg-element").css("transform", "scale(" + global_scale + ")");
-  }
+  if (event.originalEvent.deltaY < 0 && global_scale < 2) zoomIn();
+  else if (event.originalEvent.deltaY && global_scale > 0.5) zoomOut();
 });
 
-$("#zoomIn").on("click", function (event) {
+$("#zoomIn").on("click", () => zoomIn());
+
+$("#zoomOut").on("click", () => zoomOut());
+
+function zoomIn() {
   global_scale *= 1.1;
   $("#drg-element").css("transform-origin", "0 0");
   $("#drg-element").css("transform", "scale(" + global_scale + ")");
-});
+}
 
-$("#zoomOut").on("click", function (event) {
+function zoomOut() {
   global_scale *= 0.9;
   $("#drg-element").css("transform-origin", "0 0");
   $("#drg-element").css("transform", "scale(" + global_scale + ")");
-});
+}
 
 /* Register and event listener for the navigation buttons */
 $("._nav").on("click", function (event) {
@@ -141,9 +126,11 @@ function slide(className) {
   };
 }
 
-// Load desription for previous works description
+// Load desription for previous works description for desktop and mobile
 $(document).ready(function () {
   let prev_work_desc = document.getElementsByClassName("prev-works");
+  let prev_work_desc_mob = document.getElementsByClassName("prev-works-mob");
+
   for (let index = 0; index < prev_work_desc.length; index++) {
     const element = prev_work_desc[index];
     element.innerText =
@@ -151,7 +138,13 @@ $(document).ready(function () {
         ? json["pW" + (index + 1)].text.slice(0, 200) + "..."
         : json["pW" + (index + 1)].text;
   }
+
+  for (let index = 0; index < prev_work_desc_mob.length; index++) {
+    const element = prev_work_desc_mob[index];
+    element.innerText = json["pW" + (index + 1)].text;
+  }
 });
+
 // when clicking the expand buttons
 document.getElementById("expandPW1").addEventListener("click", () => {
   openModal("pW1");
@@ -226,5 +219,21 @@ function toggleCollapse(coll, icon) {
     icon.classList.remove("fa-plus");
     icon.classList.add("fa-minus");
     coll.style.maxHeight = coll.scrollHeight + "px";
+  }
+}
+
+$(".read-more").on("click", function (event) {
+  let descr = event.target.parentNode.firstChild.nextElementSibling;
+  let readMoreBtn = event.currentTarget;
+  toggleReadMore(descr, readMoreBtn);
+});
+
+function toggleReadMore(descr, readMoreBtn) {
+  if (descr.className.includes("line-clamp-4")) {
+    descr.classList.remove("line-clamp-4");
+    readMoreBtn.innerText = "Show Less";
+  } else {
+    descr.classList.add("line-clamp-4");
+    readMoreBtn.innerText = "Read More";
   }
 }

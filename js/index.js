@@ -130,18 +130,22 @@ function slide(className) {
 $(document).ready(function () {
   let prev_work_desc = document.getElementsByClassName("prev-works");
   let prev_work_desc_mob = document.getElementsByClassName("prev-works-mob");
-
+  let prev_work_title = document.getElementsByClassName("prev-works-title");
   for (let index = 0; index < prev_work_desc.length; index++) {
-    const element = prev_work_desc[index];
-    element.innerText =
+    const element_desc = prev_work_desc[index];
+    const element_desc_mob = prev_work_desc_mob[index];
+    const element_desc_title = prev_work_title[index];
+
+    element_desc.innerText =
       json["pW" + (index + 1)].text.length > 200
         ? json["pW" + (index + 1)].text.slice(0, 200) + "..."
         : json["pW" + (index + 1)].text;
+    element_desc_mob.innerText = json["pW" + (index + 1)].text;
+    element_desc_title.innerText = json["pW" + (index + 1)].title;
   }
 
   for (let index = 0; index < prev_work_desc_mob.length; index++) {
     const element = prev_work_desc_mob[index];
-    element.innerText = json["pW" + (index + 1)].text;
   }
 });
 

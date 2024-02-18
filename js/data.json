@@ -1,30 +1,30 @@
 {
     "pW1": {
         "title": "Json Item Selector",
-        "site": "ss",
-        "github": "",
+        "site": "https://www.npmjs.com/package/json-item-selector",
+        "github": "https://github.com/JosephVoid/json-item-selector",
         "img":"portfolio/npm.png",
-        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut dolores amet quo corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut, corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut"
+        "text":"<p>This is an NPM package that simplifies the choice selection logic creation when dealing with choice that affect each other down stream. The best use case is when used in the context of selecting locations from a Json file of nested items.</p><br><p>While creating this project, I utilized jest testing framework and GitHub Actions extensively. In addition to conventional tools, I used semantic analyzer to automatically version the package during the whole CI/CD process.</p>"
     },
     "pW2": {
         "title": "Sebsib Data Service",
-        "site": "ss",
-        "github": "",
+        "site": "https://sebsib.com",
+        "github": "https://github.com/SebsibOfficial",
         "img":"portfolio/sebsib-arch.png",
-        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut dolores amet quo corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut, corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut"
+        "text":"<p>Sebsib is an offline compatible data collection platform design to collect data in areas where internet connection is not available. <a target='_blank' href='https://www.youtube.com/playlist?list=PLonoXn77fQNKMZPl2SK9HfRGKopERYSQX' style='text-decoration:underline;'>Here</a> is video showing the features.</p><br><p>On the implementation (See diagram on the right), I used two separate servers. One is a managed server, which housed the domain and the ftp service from cPanel. The other is a Virtual Private Server, which I deployed my node services with PM2 and ran the MongoDB instance. In addition to server, I had a mobile app which would be used on the field to collect offline submissions with GPS data included, this was made with the Flutter framework.</p><br><p>All the services deployed on the VPS are REST services and the sites on the managed server are made with React. The arrows describe thier interaction</p>"
     },
     "pW3": {
         "title": "Buyers First",
         "site": "",
-        "github": "",
+        "github": "https://github.com/JosephVoid?tab=repositories&q=bf-&type=&language=&sort=",
         "img":"portfolio/buyerfirst.png",
-        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut dolores amet quo corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut, corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut"
+        "text":"<p>BuyersFirst is an ecommerce website that prioritizes buyers and features a bidding and escrow system to make transactions. It has a robust architecture and an easy setup automated with bash.</p><br><p>As in the diagram on the right the platform uses various technologies like:</p><ul style='list-style-type: disc;'>    <li><strong>Spring Boot</strong>: Used to make the core service: which handle business logic, the auth service: which is in charge authorizing access, the file service: which handle file uploading and fetching.</li>    <li><strong>NodeJS</strong>: Used to make the chatting service with the socket.io framework</li>    <li><strong>Python</strong>: Used to interface with queue system and SMS/Email gateway to facilitate delivery</li>    <li><strong>Redis</strong>: for in memory caching</li>    <li><strong>RabbitMQ</strong>: for queuing messages to be delivered by email or SMS</li>    <li><strong>docker/docker compose</strong>: encapsulating apps for easy deployment</li>    <li><strong>NextJS</strong>: for the client-side application</li>    <li><strong>NGINX</strong>: for reverse proxying requests</li></ul>"
     },
     "pW4": {
         "title": "Python & Telegram Site Scraper",
         "site": "",
-        "github": "",
+        "github": "https://github.com/JosephVoid/telegram-job-alert",
         "img":"portfolio/telegram.png",
-        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut dolores amet quo corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut, corruptiodit saepe dicta corporis, enim porro sequi obcaecatirepellendus repudiandae hic necessitatibus quas sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, animi, facilis aut"
+        "text":"<p>A Python application that runs on intervals and scrapes/requests data from sites. Mostly job boards and RSS feeds of job sites. After the job is done it utilizes the Telegram API and send the message to subscribed users. It can be deployed with cron or windows Task Manager.</p><br><p> To build this I used various python libraries, but the most important one was BeautifulSoup. A scraping library that makes it very easy to parse HTML. Also used the RSS feedparser to parse the RSS responses. Finally, I used the request package to call Telegram’s API and notify me about any updates. </p>"
     }
 }

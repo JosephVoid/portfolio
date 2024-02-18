@@ -23,6 +23,9 @@
 * {
   transition: all 100ms ease;
 }
+a:focus-visible {
+  outline: none;
+}
 h1,
 h3 {
   font-family: "ProtestStrike";

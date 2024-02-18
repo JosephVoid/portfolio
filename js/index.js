@@ -19,6 +19,14 @@ $("#drg-scrl").on("wheel", function (event) {
   else if (event.originalEvent.deltaY && global_scale > 0.5) zoomOut();
 });
 
+$("#drg-element").on("mousedown", () => {
+  $("#drg-element").css("cursor", "grabbing");
+});
+
+$("#drg-element").on("mouseup", () => {
+  $("#drg-element").css("cursor", "grab");
+});
+
 $("#zoomIn").on("click", () => zoomIn());
 
 $("#zoomOut").on("click", () => zoomOut());
@@ -136,11 +144,11 @@ $(document).ready(function () {
     const element_desc_mob = prev_work_desc_mob[index];
     const element_desc_title = prev_work_title[index];
 
-    element_desc.innerText =
+    element_desc.innerHTML =
       json["pW" + (index + 1)].text.length > 200
         ? json["pW" + (index + 1)].text.slice(0, 200) + "..."
         : json["pW" + (index + 1)].text;
-    element_desc_mob.innerText = json["pW" + (index + 1)].text;
+    element_desc_mob.innerHTML = json["pW" + (index + 1)].text;
     element_desc_title.innerText = json["pW" + (index + 1)].title;
   }
 
@@ -175,7 +183,7 @@ function openModal(pw) {
   let siteLink = document.getElementById("site-link");
 
   modalImg.setAttribute("src", json[pw].img);
-  figCap.innerText = json[pw].text;
+  figCap.innerHTML = json[pw].text;
   pwTitle.innerText = json[pw].title;
   gitLink.setAttribute("href", json[pw].github);
 

@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 $("#drg-scrl").on("wheel", function (event) {
   if (event.originalEvent.deltaY < 0 && global_scale < 2) zoomIn();
-  else if (event.originalEvent.deltaY && global_scale > 0.5) zoomOut();
+  else if (event.originalEvent.deltaY && global_scale > 0.7) zoomOut();
 });
 
 $("#drg-element").on("mousedown", () => {
@@ -32,15 +32,19 @@ $("#zoomIn").on("click", () => zoomIn());
 $("#zoomOut").on("click", () => zoomOut());
 
 function zoomIn() {
-  global_scale *= 1.1;
-  $("#drg-element").css("transform-origin", "0 0");
-  $("#drg-element").css("transform", "scale(" + global_scale + ")");
+  if (global_scale < 2) {
+    global_scale *= 1.1;
+    $("#drg-element").css("transform-origin", "0 0");
+    $("#drg-element").css("transform", "scale(" + global_scale + ")");
+  }
 }
 
 function zoomOut() {
-  global_scale *= 0.9;
-  $("#drg-element").css("transform-origin", "0 0");
-  $("#drg-element").css("transform", "scale(" + global_scale + ")");
+  if (global_scale > 0.7) {
+    global_scale *= 0.9;
+    $("#drg-element").css("transform-origin", "0 0");
+    $("#drg-element").css("transform", "scale(" + global_scale + ")");
+  }
 }
 
 /* Register and event listener for the navigation buttons */
@@ -249,3 +253,11 @@ function toggleReadMore(descr, readMoreBtn) {
     readMoreBtn.innerText = "Read More";
   }
 }
+
+document.addEventListener(
+  "wheel",
+  (e) => {
+    if (e.ctrlKey) e.preventDefault(); //prevent zoom
+  },
+  { passive: false }
+);

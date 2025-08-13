@@ -143,10 +143,14 @@ $(document).ready(function () {
   let prev_work_desc = document.getElementsByClassName("prev-works");
   let prev_work_desc_mob = document.getElementsByClassName("prev-works-mob");
   let prev_work_title = document.getElementsByClassName("prev-works-title");
+  let prev_work_title_mob = document.getElementsByClassName(
+    "prev-works-title-mob"
+  );
   for (let index = 0; index < prev_work_desc.length; index++) {
     const element_desc = prev_work_desc[index];
     const element_desc_mob = prev_work_desc_mob[index];
     const element_desc_title = prev_work_title[index];
+    const element_desc_title_mob = prev_work_title_mob[index];
 
     element_desc.innerHTML =
       json["pW" + (index + 1)].text.length > 200
@@ -154,6 +158,7 @@ $(document).ready(function () {
         : json["pW" + (index + 1)].text;
     element_desc_mob.innerHTML = json["pW" + (index + 1)].text;
     element_desc_title.innerText = json["pW" + (index + 1)].title;
+    element_desc_title_mob.innerText = json["pW" + (index + 1)].title;
   }
 
   for (let index = 0; index < prev_work_desc_mob.length; index++) {
@@ -234,7 +239,7 @@ function toggleCollapse(coll, icon) {
   } else {
     icon.classList.remove("fa-plus");
     icon.classList.add("fa-minus");
-    coll.style.maxHeight = coll.scrollHeight + "px";
+    coll.style.maxHeight = coll.scrollHeight + 400 + "px";
   }
 }
 

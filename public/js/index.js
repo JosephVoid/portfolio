@@ -104,8 +104,10 @@ if (screen.width > 500) {
   /* Slide Logic */
   let changeSlide2 = slide("slide_2");
   let changeSlide3 = slide("slide_3");
+  let changeSlide5 = slide("slide_5");
   setInterval(() => changeSlide2(), 5000);
   setInterval(() => changeSlide3(), 5000);
+  setInterval(() => changeSlide5(), 5000);
 }
 
 function slide(className) {
@@ -173,6 +175,9 @@ document.getElementById("expandPW3").addEventListener("click", () => {
 });
 document.getElementById("expandPW4").addEventListener("click", () => {
   openModal("pW4");
+});
+document.getElementById("expandPW5").addEventListener("click", () => {
+  openModal("pW5");
 });
 document.getElementById("closeModalId").addEventListener("click", () => {
   closeModal();

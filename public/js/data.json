@@ -1,4 +1,11 @@
 {
+  "personalInfo": {
+    "name": "Yoseph Tenaw",
+    "about": [
+      "I'm Yoseph, a passionate Software Engineer and Web Developer hailing from the vibrant city of Addis Ababa, Ethiopia. My journey into the world of programming has been driven by a genuine love for building solutions that tackle real-world problems. From the initial concept to the deployment phase, I've had the pleasure of experiencing the entire development lifecycle, cultivating a versatile skill set that allows me to contribute seamlessly at any stage of a project.",
+      "Explore this site, and don't hesitate to reach out. I'm always open to connecting with fellow enthusiasts, be it about coding, philosophy, or the latest Arsenal match. Looking forward to the possibilities that await!"
+    ]
+  },
   "pW1": {
     "title": "Json Item Selector",
     "site": "https://www.npmjs.com/package/json-item-selector",
@@ -11,7 +18,7 @@
     "site": "https://sebsib.com",
     "github": "https://github.com/SebsibOfficial",
     "img": "portfolio/sebsib-arch.png",
-    "text": "<p>Sebsib is an offline compatible data collection platform design to collect data in areas where internet connection is not available. <a target='_blank' href='https://www.youtube.com/playlist?list=PLonoXn77fQNKMZPl2SK9HfRGKopERYSQX' style='text-decoration:underline;'>Here</a> is video showing the features.</p><br><p>On the implementation (See diagram ), I used two separate servers. One is a managed server, which housed the domain and the ftp service from cPanel. The other is a Virtual Private Server, which I deployed my node services with PM2 and ran the MongoDB instance. In addition to server, I had a mobile app which would be used on the field to collect offline submissions with GPS data included, this was made with the Flutter framework.</p><br><p>All the services deployed on the VPS are REST services and the sites on the managed server are made with React. The arrows describe thier interaction</p>"
+    "text": "<p>Sebsib is an offline compatible data collection platform design to collect data in areas where internet connection is not available. <a target='_blank' href='https://www.youtube.com/playlist?list=PLonoXn77fQNKMZPl2SK9HfRGKopERYSQX' style='text-decoration:underline;'>Here</a> is video showing the features.</p><br><p>On the implementation (See diagram ), I used two separate servers. One is a managed server, which housed the domain and the ftp service from cPanel. The other is a Virtual Private Server, which I deployed my node services with PM2 and ran the MongoDB instance. In addition to server, I had a mobile app which would be used on the field to collect offline submissions with GPS data included, this was made with the React Native framework.</p><br><p>All the services deployed on the VPS are REST services and the sites on the managed server are made with React. The arrows describe thier interaction</p>"
   },
   "pW3": {
     "title": "Buyers First",
@@ -26,5 +33,87 @@
     "github": "https://github.com/JosephVoid/telegram-job-alert",
     "img": "portfolio/telegram.png",
     "text": "<p>A Python application that runs on intervals and scrapes/requests data from sites. Mostly job boards and RSS feeds of job sites. After the job is done it utilizes the Telegram API and send the message to subscribed users. It can be deployed with cron or windows Task Manager.</p><br><p> To build this I used various python libraries, but the most important one was BeautifulSoup. A scraping library that makes it very easy to parse HTML. Also used the RSS feedparser to parse the RSS responses. Finally, I used the request package to call Telegram’s API and notify me about any updates. </p>"
-  }
+  },
+  "pW5": {
+    "title": "Kelal SMS",
+    "site": "",
+    "github": "https://github.com/JosephVoid?tab=repositories&q=kelal&type=&language=&sort=",
+    "img": "portfolio/kelal-arch.png",
+    "text": "<p>Kelal SMS is a platform that simplifies automated SMS messaging in Ethiopia. Sending automated SMS typically requires obtaining a license and integrating directly with telecom providers. Kelal SMS abstracts these steps so users can create an account and send messages through a unified system.</p><p><strong>Architecture Overview:</strong></p><ul><li><strong>Next.js</strong> — user-facing portal for account management and SMS operations.</li><li><strong>NestJS</strong> — backend service exposing an API for SMS delivery.</li><li><strong>Prisma ORM</strong> — data access layer connecting services to the database.</li><li><strong>PostgreSQL</strong> — primary database for accounts, messages, and system data.</li><li><strong>External SMS Providers</strong> — integrated via the backend; abstracted from end users.</li><li><strong>VPS</strong> — hosting environment for all services.</li></ul><p>This setup provides a single interface for sending SMS messages without requiring individual licensing or direct provider integrations by end users.</p>"
+  },
+  "skills": {
+    "languages": "/tech/languages.png",
+    "frameworks": "/tech/frameworks.png",
+    "database": "/tech/databases.png",
+    "tools": "/tech/other.png"
+  },
+  "experience": [
+    {
+      "company": "Mine Marketing",
+      "logo": "/mine-m.jpeg",
+      "linkedin": "https://www.linkedin.com/company/mine-marketing/",
+      "title": "Software Developer",
+      "location": "Tel Aviv",
+      "year": "2025 -"
+    },
+    {
+      "company": "Uprow",
+      "logo": "/uprow.jpeg",
+      "linkedin": "https://www.linkedin.com/company/uprow/",
+      "title": "Senior Software Developer",
+      "location": "Canada",
+      "year": "2024"
+    },
+    {
+      "company": "Dashen Bank",
+      "logo": "/dashen.png",
+      "linkedin": "https://www.linkedin.com/company/dashen-bank-official-page/",
+      "title": "Software and Integrations Developer",
+      "location": "AA",
+      "year": "2022-24"
+    },
+    {
+      "company": "MassDel",
+      "logo": "/massdel.jpg",
+      "linkedin": "https://www.linkedin.com/company/massdel/",
+      "title": "Full Stack Developer",
+      "location": "AA",
+      "year": "2021-22"
+    },
+    {
+      "company": "Beez",
+      "logo": "/beez.jpg",
+      "linkedin": "https://www.linkedin.com/company/beezsocialerp/",
+      "title": "Junior Developer",
+      "location": "NY",
+      "year": "2020-21"
+    }
+  ],
+  "links": [
+    {
+      "name": "GitHub/JosephVoid",
+      "url": "https://github.com/JosephVoid",
+      "icon": "fa-github"
+    },
+    {
+      "name": "yoseph.tenaw.andualem@gmail.com",
+      "url": "mailto:yoseph.tenaw.andualem@gmail.com",
+      "icon": "fa-envelope"
+    },
+    {
+      "name": "LinkedIn/yoseph-tenaw",
+      "url": "https://www.linkedin.com/in/yoseph-tenaw/",
+      "icon": "fa-linkedin"
+    },
+    {
+      "name": "Dev.to/yosephtenaw",
+      "url": "https://dev.to/yosephtenaw",
+      "icon": "fa-commenting"
+    },
+    {
+      "name": "+251920642556",
+      "url": "tel:+251920642556",
+      "icon": "fa-phone-square"
+    }
+  ]
 }

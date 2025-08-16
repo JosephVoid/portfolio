@@ -12,6 +12,10 @@ var global_scale = 1;
 $(document).ready(function () {
   $("#drg-scrl").dragpan();
   zoomIn();
+  load_personal_info();
+  load_skills();
+  load_experience();
+  load_links();
 });
 
 $("#drg-scrl").on("wheel", function (event) {
@@ -239,7 +243,7 @@ function toggleCollapse(coll, icon) {
   } else {
     icon.classList.remove("fa-plus");
     icon.classList.add("fa-minus");
-    coll.style.maxHeight = coll.scrollHeight + "px";
+    coll.style.maxHeight = coll.scrollHeight + 600 + "px";
   }
 }
 
@@ -266,3 +270,68 @@ document.addEventListener(
   },
   { passive: false }
 );
+
+function load_personal_info() {
+  $("#name-desktop").text(json.personalInfo.name);
+  $("#name-mobile").text(json.personalInfo.name);
+  $("#about-desktop").html(
+    json.personalInfo.about
+      .map((p) => `<p class="text-start">${p}</p>`)
+      .join("<br/>")
+  );
+  $("#about-mobile").html(
+    json.personalInfo.about
+      .map((p) => `<p class="text-start">${p}</p>`)
+      .join("<br/>")
+  );
+}
+
+function load_skills() {
+  $("#languages-desktop").attr("src", json.skills.languages);
+  $("#frameworks-desktop").attr("src", json.skills.frameworks);
+  $("#database-desktop").attr("src", json.skills.database);
+  $("#tools-desktop").attr("src", json.skills.tools);
+  $("#languages-mobile").attr("src", json.skills.languages);
+  $("#frameworks-mobile").attr("src", json.skills.frameworks);
+  $("#database-mobile").attr("src", json.skills.database);
+  $("#tools-mobile").attr("src", json.skills.tools);
+}
+
+function load_experience() {
+  const experience_desktop = json.experience
+    .map(
+      (exp) => `
+    <tr>
+      <td class="w-1/5 pb-4">
+        <a target="_blank" href="${exp.linkedin}">
+          <img class="object-contain rounded-lg" src="${exp.logo}" alt="" />
+        </a>
+      </td>
+      <td class="ps-4">
+        <p class="text-start font-normal">${exp.title}, ${exp.location}</p>
+        <p class="text-start">${exp.year}</p>
+      </td>
+    </tr>
+  `
+    )
+    .join("");
+  $("#experience-desktop").html(experience_desktop);
+  $("#experience-mobile").html(experience_desktop);
+}
+
+function load_links() {
+  const links_desktop = json.links
+    .map(
+      (link) => `
+    <a target="_blank" href="${link.url}">
+      <div class="flex items-center rounded-md justify-start p-3 bg-lightest-grey mb-2 hover:border hover:border-gray-300 hover:border-opacity-80">
+        <i class="fa ${link.icon} scale-[1.5]"></i>
+        <p class="ml-4">${link.name}</p>
+      </div>
+    </a>
+  `
+    )
+    .join("");
+  $("#links-desktop").html(links_desktop);
+  $("#links-mobile").html(links_desktop);
+}

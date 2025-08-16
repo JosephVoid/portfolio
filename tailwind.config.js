@@ -12,4 +12,14 @@ export default {
     },
   },
   plugins: [],
+  safelist: [
+    "w-1/5",
+    "pb-4",
+    "object-contain",
+    "rounded-lg",
+    "ps-4",
+    "text-start",
+    "font-normal",
+    "ml-4",
+  ],
 };

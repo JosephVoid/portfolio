@@ -215,6 +215,11 @@ function closeModal() {
   let modal = document.querySelector("dialog");
   modal.close();
 }
+// Initially display photo
+toggleCollapse(
+  document.getElementById("photo-collapse"),
+  document.getElementById("photo-icon")
+);
 
 $(".collapse-button").on("click", function (event) {
   let icon = event.currentTarget.firstChild.nextElementSibling;

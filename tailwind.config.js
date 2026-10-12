@@ -1,25 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./js/*.js"],
+  content: ["./index.html", "./src/**/*.js"],
   theme: {
     extend: {
       colors: {
         "lightest-grey": "#f9f9f9",
       },
-      width: {
-        "1/8": "12.5%",
-      },
     },
   },
   plugins: [],
-  safelist: [
-    "w-1/5",
-    "pb-4",
-    "object-contain",
-    "rounded-lg",
-    "ps-4",
-    "text-start",
-    "font-normal",
-    "ml-4",
-  ],
 };

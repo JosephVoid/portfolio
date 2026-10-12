@@ -19,8 +19,9 @@ npm run format   # Prettier
 
 All text, links and image paths live in `src/data.json`. Both layouts render from it.
 
-- **Add a project:** append an entry to `projects`. `image` is the main picture. `logo` is optional; when set, the desktop card alternates between the logo and the image. Leave `site` empty if there is no live site. `text` may contain HTML.
+- **Add a project:** append an entry to `projects`. `image` is the main picture. `logo` is optional; when set, the desktop card alternates between the logo and the image. Leave `site` empty if there is no live site. `year` is shown under the title. `text` may contain HTML.
 - **Add a job or a link:** append an entry to `experience` or `links`. A link's `icon` is a [Font Awesome 4](https://fontawesome.com/v4/icons/) class.
+- **Add a skill:** each group in `skills` is a list of `{ name, icon }`; put the logo in `public/tech/`.
 - **Images** go in `public/` and are referenced from the root, for example `/portfolio/npm.png`.
 
 ## Structure
@@ -39,4 +40,4 @@ src/
 public/           static images and fonts
 ```
 
-Elements in `index.html` marked with `data-slot`, `data-skill` or `data-contact-form` are filled in by `src/content.js`.
+Elements in `index.html` marked with `data-slot`, `data-skill-icons` or `data-contact-form` are filled in by `src/content.js`.

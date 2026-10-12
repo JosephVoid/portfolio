@@ -5,7 +5,7 @@ import { fillSlots } from "./dom.js";
 const NAV_SECTIONS = [
   { label: "Photo", target: "intro" },
   { label: "About Me", target: "about" },
-  { label: "My Skills", target: "skills" },
+  { label: "My Inventory", target: "skills" },
   { label: "My Projects", target: "projects" },
   { label: "Experience", target: "experience" },
   { label: "Links", target: "links" },
@@ -53,9 +53,20 @@ function renderPersonalInfo() {
   );
 }
 
+// Each skill group is a list of { name, icon } entries, rendered into the
+// containers marked with `data-skill-icons="<group>"`.
 function renderSkills() {
-  for (const image of document.querySelectorAll("[data-skill]")) {
-    image.src = data.skills[image.dataset.skill];
+  for (const container of document.querySelectorAll("[data-skill-icons]")) {
+    container.innerHTML = data.skills[container.dataset.skillIcons]
+      .map(
+        (skill) => `
+          <div class="flex flex-col items-center gap-1">
+            <img class="h-9 w-9 object-contain" src="${skill.icon}" alt="" />
+            <p class="text-xs">${skill.name}</p>
+          </div>
+        `,
+      )
+      .join("");
   }
 }
 

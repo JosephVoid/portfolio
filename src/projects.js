@@ -60,7 +60,8 @@ function renderDesktopCards() {
           </div>
         </div>
         <div class="flex flex-col justify-center">
-          <p class="mb-2 text-xl font-normal">${project.title}</p>
+          <p class="text-xl font-normal">${project.title}</p>
+          <p class="mb-2 opacity-60">${project.year}</p>
           <p class="project-description"></p>
         </div>
       </div>
@@ -118,7 +119,8 @@ function renderMobileCards() {
             ${projectLinks(project)}
           </div>
         </div>
-        <p class="font-bold mb-2">${project.title}</p>
+        <p class="font-bold">${project.title}</p>
+        <p class="text-sm opacity-60 mb-2">${project.year}</p>
         <div>
           <p class="project-description ${CLAMP_CLASS}"></p>
           <span class="read-more">Read More</span>
@@ -141,6 +143,7 @@ function renderMobileCards() {
 const modal = {
   dialog: document.getElementById("project-modal"),
   title: document.getElementById("project-modal-title"),
+  year: document.getElementById("project-modal-year"),
   text: document.getElementById("project-modal-text"),
   image: document.getElementById("project-modal-image"),
   githubLink: document.getElementById("project-modal-github"),
@@ -154,6 +157,7 @@ function initModal() {
 
 function openModal(project) {
   modal.title.innerText = project.title;
+  modal.year.innerText = project.year;
   modal.text.innerHTML = project.text;
   modal.image.src = project.image;
   modal.githubLink.href = project.github;

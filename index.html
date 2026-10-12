@@ -81,34 +81,25 @@
         >
           <div class="accordion-toggle flex justify-center items-center mb-2">
             <i class="fa fa-plus mr-2"></i>
-            <h4>My Skills</h4>
+            <h4>My Inventory</h4>
           </div>
           <div class="accordion-panel max-h-0 overflow-hidden">
             <div class="flex flex-col justify-center align-middle">
-              <p class="text-sm mb-1">Languages</p>
-              <div class="flex items-start mb-4 border-l border-gray-600">
-                <div class="relative w-1/2 h-1/6 mx-4">
-                  <img alt="" data-skill="languages" />
-                </div>
-              </div>
-              <p class="text-sm mb-2">Frameworks</p>
-              <div class="flex items-start mb-4 border-l border-gray-600">
-                <div class="relative w-5/6 h-1/6 mx-4">
-                  <img alt="" data-skill="frameworks" />
-                </div>
-              </div>
+              <p class="text-sm mb-2">Assistants</p>
+              <div
+                class="flex flex-wrap gap-4 mb-4 pl-4 border-l border-gray-600"
+                data-skill-icons="assistants"
+              ></div>
+              <p class="text-sm mb-2">Languages</p>
+              <div
+                class="flex flex-wrap gap-4 mb-4 pl-4 border-l border-gray-600"
+                data-skill-icons="languages"
+              ></div>
               <p class="text-sm mb-2">Database & Infrastructure</p>
-              <div class="flex items-start mb-4 border-l border-gray-600">
-                <div class="relative w-5/6 h-1/6 mx-4">
-                  <img alt="" data-skill="database" />
-                </div>
-              </div>
-              <p class="text-sm mb-2">Tools & Others</p>
-              <div class="flex items-start mb-4 border-l border-gray-600">
-                <div class="relative w-5/6 h-1/6 mx-4">
-                  <img alt="" data-skill="tools" />
-                </div>
-              </div>
+              <div
+                class="flex flex-wrap gap-4 mb-4 pl-4 border-l border-gray-600"
+                data-skill-icons="database"
+              ></div>
             </div>
           </div>
         </div>
@@ -222,42 +213,29 @@
           <div data-slot="about"></div>
         </div>
         <div class="canvas-card" id="skills-education">
-          <div class="canvas-card rounded-l-xl rounded-br-xl" id="skills">
-            <h3 class="uppercase opacity-80 text-center mb-4">Skills</h3>
+          <div class="canvas-card rounded-xl" id="skills">
+            <h3 class="uppercase opacity-80 text-center mb-4">Inventory</h3>
             <div class="flex flex-col text-start">
               <div class="mb-2 px-4 pt-2 rounded-lg bg-lightest-grey">
+                <p class="font-normal">Assistants</p>
+                <div
+                  class="flex justify-evenly my-2"
+                  data-skill-icons="assistants"
+                ></div>
+              </div>
+              <div class="mb-2 px-4 pt-2 rounded-lg bg-lightest-grey">
                 <p class="font-normal">Languages</p>
-                <div class="flex justify-evenly my-2">
-                  <div class="relative w-1/2 h-1/6 mr-4">
-                    <img alt="" data-skill="languages" />
-                  </div>
-                </div>
+                <div
+                  class="flex justify-evenly my-2"
+                  data-skill-icons="languages"
+                ></div>
               </div>
-              <div class="mb-2 px-4 pt-2 rounded-lg bg-lightest-grey">
-                <p class="font-normal">Frameworks & Libraries</p>
-                <div class="flex justify-evenly flex-wrap my-2">
-                  <div class="relative h-1/6 mr-4">
-                    <img alt="" data-skill="frameworks" />
-                  </div>
-                </div>
-              </div>
-              <div class="mb-2 px-4 pt-2 rounded-lg bg-lightest-grey">
+              <div class="px-4 pt-2 rounded-lg bg-lightest-grey">
                 <p class="font-normal">Database & Infrastructure</p>
-                <div class="flex justify-evenly flex-wrap my-2">
-                  <div class="text-center mr-4 relative">
-                    <img alt="" data-skill="database" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="canvas-card !rounded-r-xl" id="skills-tools">
-            <div class="text-start pb-2 px-4 pt-4 rounded-lg bg-lightest-grey">
-              <p class="font-normal">Tools & Others</p>
-              <div class="flex justify-evenly flex-wrap my-2">
-                <div class="text-center mr-4 relative">
-                  <img alt="" data-skill="tools" />
-                </div>
+                <div
+                  class="flex justify-evenly flex-wrap gap-x-3 gap-y-2 my-2"
+                  data-skill-icons="database"
+                ></div>
               </div>
             </div>
           </div>
@@ -272,6 +250,19 @@
                   <p class="text-start">
                     Addis Ababa Science and Technology University, Bsc.
                   </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="w-1/4">
+                  <img
+                    class="object-contain"
+                    src="/UniPassau.png"
+                    alt=""
+                    width="50"
+                  />
+                </td>
+                <td>
+                  <p class="text-start">Universität Passau, Msc. *</p>
                 </td>
               </tr>
             </table>
@@ -317,6 +308,7 @@
     >
       <div class="p-8">
         <h1 id="project-modal-title" class="leading-snug"></h1>
+        <p id="project-modal-year" class="opacity-60"></p>
         <div class="flex my-4 items-center justify-start">
           <div class="mr-8">
             <a

@@ -146,79 +146,27 @@ h4 {
 }
 
 /* ==========================================================================
-   Skills and education
-   #skills-education is an invisible wrapper with its own 13 x 13 grid.
-   #skills and #skills-tools join into one L-shaped card; #education sits in
-   the notch of the L.
+   Inventory and education
+   #skills-education is an invisible wrapper with its own 13-column grid that
+   holds the two cards side by side.
    ========================================================================== */
 
 #skills-education {
   display: grid;
+  gap: 15px;
   grid-template-columns: repeat(13, 1fr);
-  grid-template-rows: repeat(13, 1fr);
   padding: 0 !important;
   background-color: unset;
 }
 #skills-education:hover {
   box-shadow: initial;
-  transform: initial;
   background-color: initial;
 }
-
 #skills {
   grid-column: 1 / 8;
-  grid-row: 1 / 14;
-  background-color: #fcfcfc;
-  border: none !important;
-}
-#skills-tools {
-  position: relative;
-  grid-column: 8 / 14;
-  grid-row: 1 / 6;
-  background-color: #fcfcfc;
-  border-radius: 0 0 0 10px;
-  transform: translateX(-2px);
 }
 #education {
   grid-column: 8 / 14;
-  grid-row: 6 / 14;
-  margin: 15px 0 0 15px;
-}
-
-/* Rounds the inner corner where the two halves of the L meet. */
-#skills-tools::before {
-  content: "";
-  position: absolute;
-  background-color: white;
-  bottom: -26px;
-  height: 25px;
-  width: 15px;
-  border-top-left-radius: 25px;
-  box-shadow: 0 -15px 0 0 #fcfcfc;
-  left: 1px;
-}
-
-/* Hovering either half highlights both. */
-#skills:hover,
-#skills:hover ~ #skills-tools,
-#skills:has(+ #skills-tools:hover),
-#skills-tools:hover {
-  border: 2px solid #81818136;
-  border-left: 0 !important;
-  background-color: #fafafa;
-}
-#skills:has(+ #skills-tools:hover) {
-  box-shadow: 0px 0px 0 1px #81818136;
-}
-#skills-tools:hover {
-  box-shadow: none !important;
-}
-#skills:hover ~ #skills-tools::before,
-#skills-tools:hover::before {
-  border-top: 2px solid #81818136;
-  border-left: 2px solid #81818136;
-  box-shadow: 0 -15px 0 0 #fafafa;
-  transform: translateY(-1.5px);
 }
 
 /* ==========================================================================
